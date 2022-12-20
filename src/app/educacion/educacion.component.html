@@ -1,0 +1,33 @@
+<div class="row">
+    
+    <h1>Estudios</h1>
+    <div class="btn1">
+    <button class="btn" type="button" data-bs-toggle="modal" data-bs-target="#educacion">
+        <i class="fa-regular fa-pen-to-square fa-xl"> </i>
+      </button>
+      <button class="btn" type="button" data-bs-toggle="modal" data-bs-target="#sobreMi">
+        <i class="bi bi-trash3 fa-xl"></i>
+    </button>
+    <app-m-estudios></app-m-estudios>
+
+</div>
+
+    
+    <div class="col-lg-1"></div>
+    <div class="col-lg-11">
+        
+        <ul *ngFor="let educacion of edu">
+            <li>
+               <h2>{{educacion.instit}}</h2>
+               <h5>{{educacion.nivel}}</h5>
+               <h5>{{educacion.titulo}}</h5>
+               <h5>{{educacion.inicio}}</h5>
+               <p>{{educacion.descrip}}</p> 
+            </li>
+        
+        </ul>
+        
+        
+
+    </div>
+</div>

@@ -1,0 +1,38 @@
+.row {
+    padding: 20px;
+    background-color: dimgrey;
+    border: 1px solid #000;
+   
+
+}
+.btn1{
+margin-left:90% ;
+}
+
+div {
+   /*background-image: url(/assets/img/expLabora.jpg);*/
+   
+    height:auto;
+    background-size: cover;
+    background-attachment: fixed;
+  
+}
+
+h1{
+    text-align: center;
+}
+h2,
+h3,button {
+    display: inline;
+}
+
+
+h1, p{
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top:50px;
+    color: #ffffff;
+}
+h2, h3{
+    color: #ffffff;
+}

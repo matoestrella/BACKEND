@@ -1,0 +1,50 @@
+<div class="row">
+    <div class="col-xs-12 col-sm-122 col-md-2 col-lg2">
+        <img [src]="dx.fotoPerfil" class="img-fluid"><!--el fluit es para que en boost la img sea responsiv-->
+    </div>
+
+    <div class="col-xs-12 col-sm-12 col-md-2 col-lg2">
+        <p id="nombre">{{nombre}}{{apellido}}</p>
+        <p id="titulo">{{titulo}}</p>
+        <p id="email">{{dx.email}}</p>
+        <p id="telefono">{{dx.telefono}}</p>
+
+        <button class="btn" type="button" data-bs-toggle="modal" data-bs-target="#Perfil">
+            <i class="bi bi-pencil-square fa-xl"> </i>
+        </button>
+        <button class="btn" type="button" data-bs-toggle="modal" data-bs-target="#sobreMi">
+            <i class="bi bi-trash3 fa-xl"></i>
+        </button>
+
+        <app-m-perfil></app-m-perfil>
+
+    </div>
+
+
+    <!--------------------------------------------->
+
+    <div class="col-xs-12 col-sm-12 col-md-8 col-lg8 mato">
+                
+        <span>            
+           
+            <div class="btn1">
+
+                <button class="btn" type="button" data-bs-toggle="modal" data-bs-target="#sobreMi">
+                    <i class="bi bi-pencil-square fa-xl"></i> 
+                </button>     
+    
+                <button class="btn" type="button" data-bs-toggle="modal" data-bs-target="#sobreMi">
+                    <i class="bi bi-trash3 fa-xl"></i>
+                </button>
+                
+                <app-m-acerca></app-m-acerca>    
+                       
+            </div>
+           
+            <h1>Acerca de Mi</h1> 
+            <p>{{descripcion}}</p>   
+                    
+        </span>
+    </div>
+
+</div>

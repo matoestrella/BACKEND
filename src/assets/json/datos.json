@@ -1,0 +1,65 @@
+{
+    "nombre": "Matias ",
+    "apellido": "Estrella",
+    "descripcion": "Responsable y dedicado.Los años de atencion al publico me ayudado a poder identificar las necesidades de los clientes. Gran capacidad de trabajo en equipo. Me gusta aprender e investigar",
+    "titulo": "Full stack Developer Jr.",
+    "fotoPerfil": "./assets/img/Mato.jpg",
+    "email":"matoestrella@gmail.com",
+    "telefono":"+54-2616992804",
+    
+    "trabajos": [
+        {
+            "id":1,
+            "empresa": "Restaurante Buenos Muchachos",
+            "periodo": "2004-2006",
+            "descrip": "Administracion y Encargado del local"
+        },
+        {
+            "id":2,
+            "empresa": "Editor y realizador freelace",
+            "periodo": "2006- actualidad",
+            "descrip": "Realizaba trabajos en el campo audivisual, edicion y realizacion.Lo que me a dado experienciacon en el campode la realizacion digital "
+        },
+        {
+            "id":3,
+            "empresa": "Buffet el ITU, cede Lujan ",
+            "periodo": "2009-2020",
+            "descrip": "Propietario durande mas de 10 años, del bufet del ITU (Instituto Tecnologico Universitario), Lo que brindo gran experiencia en el trabajo, en equipo y la administracion y la atencion de clientes y de identificar sus nececidades"
+        }
+        ],
+
+    "educacion": [
+        {
+            "id":1,
+            "instit": "Esc. Tomas Silvestre",
+            "nivel": "Secundario",
+            "titulo": "Perito Mercantil Contable",
+            "inicio": "1993-1999",
+            "descrip": ""
+        },
+        {
+            "id":2,
+            "instit": "Universidad San francisco UCA",
+            "nivel": "Univercitario ",
+            "titulo": "Analista de Sistema",
+            "inicio": "2000-2004",
+            "descrip": "Curse hasta 4to año de la Carrera de Analista de sistemas"
+        },
+        {
+            "id":3,
+            "instit": "Se Programar",
+            "nivel": "",
+            "titulo": "",
+            "inicio": "2022",
+            "descrip": "Aprovado el curso de -Se Programar-,#SéProgramar es un curso introductorio en el que vas a aprender los fundamentos básicos de la programación, mediante el lenguaje JavaScript,. "
+        },
+        {
+            "id":4,
+            "instit": "Yo programo",
+            "nivel": "",
+            "titulo": "Full stack Developer Jr.",
+            "inicio": "11/11/11",
+            "descrip": "#YoProgramo es un curso de la segunda etapa de Argentina Programa 4.0. Donde se adquieren los siguientes conosimientos: Introducción a desarrollo web y aplicaciones,Front End estático,itios web estáticos usando HTML, CSS, y Javascript.Desarrollo Web Dinámico utilizando Angular, Bases de datos,Java EE,Java Spring boot"
+        }
+    ]
+}
