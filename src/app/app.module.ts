@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 //servicios
 
 
@@ -17,14 +18,12 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
 import { HabilidadesComponent } from './habilidades/habilidades.component';
 import { ProyectosComponent } from './proyectos/proyectos.component';
 import { FooterComponent } from './footer/footer.component';
-
-//componentes de la pagina module
-import { LoginComponent } from './Module/login/login.component';
 import { MPerfilComponent } from './Module/m-perfil/m-perfil.component';
 import { MAcercaComponent } from './Module/m-acerca/m-acerca.component';
 import { MEsperienciaComponent } from './Module/m-esperiencia/m-esperiencia.component';
 import { MEstudiosComponent } from './Module/m-estudios/m-estudios.component';
 import { MProyectosComponent } from './Module/m-proyectos/m-proyectos.component';
+import { MLoginComponent } from './Module/m-login/m-login.component';
 
 
 
@@ -43,24 +42,20 @@ import { MProyectosComponent } from './Module/m-proyectos/m-proyectos.component'
     HabilidadesComponent,
     ProyectosComponent,
     FooterComponent,
-    LoginComponent,
+   
     MPerfilComponent,
     MAcercaComponent,
     MEsperienciaComponent,
     MEstudiosComponent,
     MProyectosComponent,
+    MLoginComponent,
   
 
-   
-
- 
-  
-    
- 
-  
     
   ],
   imports: [
+    FormsModule,
+    ReactiveFormsModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,

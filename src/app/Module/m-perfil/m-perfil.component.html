@@ -1,65 +1,67 @@
- <!-- Modal  Perfil-->
- <div class="modal fade " id="Perfil" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
- aria-labelledby="staticBackdropLabel" aria-hidden="true">
- <div class="modal-dialog">
-   <div class="modal-content">
-     <div class="modal-header ">
-       <h5 class="modal-title" id="staticBackdropLabel">Perfil</h5>
+<!-- Modal  Perfil-->
 
-       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-     </div>
-     <div class="modal-body">
+<div class="modal fade " id="Perfil" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header ">
+        <h5 class="modal-title" id="staticBackdropLabel">Perfil</h5>
 
-       <!----------formulario modal-------------->
-       <form class="row g-3 ">
-         <div class="row g-3 ">
-           <label for="inputFoto" class="form-label">Foto perfil</label>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
 
-           <div class="input-group mb-3">
-             <input type="file" class="form-control" id="inputGroupFile02">
-             <label class="input-group-text" for="inputGroupFile02">Subir</label>
-           </div>
+        <!----------formulario modal-------------->
+        <form> <!--formulariogeneral-->
+          <form class="row g-3 ">
+            <div class="row g-3 ">
+              <label for="inputFoto" class="form-label">Foto perfil</label>
 
-           <div class="col ">
-             <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre">
-           </div>
 
-           <div class="col">
-             <input type="text" class="form-control" placeholder="Apellido" aria-label="Apellido">
-           </div>
-         </div>
+              <div class="input-group mb-3">
+                <input type="file" class="form-control" id="inputGroupFile02">
+                <label class="input-group-text" for="inputGroupFile02">Subir</label>
+              </div>
 
-         <div class="col-12">
-           <label for="inputAddress" class="form-label">Titulo</label>
-           <input type="text" class="form-control" id="inputAddress" placeholder=""><br>
+              <div class="col ">
+                <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre">
+              </div>
 
-           <label class="form-label" for="typeEmailX">Email</label>
-           <input type="email" id="typeEmailX" class="form-control form-control-lg" />
-            
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Apellido" aria-label="Apellido">
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="inputAddress" class="form-label">Titulo</label>
+              <input type="text" class="form-control" id="inputAddress" placeholder=""><br>
+
+              <label class="form-label" for="typeEmailX">Email</label>
+              <input type="email" id="typeEmailX" class="form-control form-control-lg" />
+
+            </div>
+
+            <div class="col-12">
+
+            </div>
+            <div class="col-md-6">
+              <label for="inputProv" class="form-label">Telefono</label>
+              <input type="text" class="form-control" id="inputProv">
+            </div>
+          </form>
+
           
-          </div>
+        </form> <!-- cierrer formulariogeneral-->
+      </div>
+      <!----------botones formulario modal-------------->
 
-         <div class="col-12">
-
-         </div>
-         <div class="col-md-6">
-          
-           <label for="inputProv" class="form-label">Telefono</label>
-           <input type="text" class="form-control" id="inputProv">
-         </div>
-         
-
-       </form>
-     </div>
-     <!----------botones formulario modal-------------->
-
-     <div class="modal-footer">
-       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-       <button type="submit" class="btn btn-primary">Enviar</button>
-     </div>
-   </div>
-   <!--cierre del body modal-->
- </div>
- <!--cierre del modal dialogo-->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </div>
+    </div>
+    <!--cierre del body modal-->
+  </div>
+  <!--cierre del modal dialogo-->
 </div>
 <!--cierre del modal-->
