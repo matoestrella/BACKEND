@@ -5,31 +5,74 @@
   <div class="modal-dialog">
     <div class="modal-content">
 
+
+  
+      
       <div class="modal-header">
         <h5 class="modal-title" id="staticBackdropLabel">Educacion</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
 
+<form [formGroup]="form" (ngSubmit)="onEnviar($event)">
       <div class="modal-body">
 
         <div class="input-group">
+ 
+        <div class="col-12">
 
-          <div class="col-12">
-            <input type="text" class="form-control" id="estudiosSecundarios2" placeholder="Institucion"><br>
-            <input type="text" class="form-control" id="estudiosSecundarios2" placeholder="Nivel"><br>
-            <input type="text" class="form-control" id="estudiosSecundarios2" placeholder="Titulo"><br>
-            <input type="text" class="form-control" id="estudiosSecundarios2" placeholder="Periodo"><br>
-            <textarea placeholder="Descripcion" class="form-control" aria-label="With textarea"></textarea>
+            <input type="text" class="form-control" formControlName="institucion" id="institucion"
+              placeholder="Institucion"><br>
+              
+              <div *ngIf="Institucion?.errors  && Institucion?.touched">    
+                <p *ngIf="Institucion?.hasError('required')" class="error">
+                    La Institucion es requerida.
+                </p>                                  
+                </div>
+            
+            <input type="text" class="form-control" formControlName="nivel" id="nivel" placeholder="Nivel"><br>
+            
+               <div *ngIf="Nivel?.errors  && Nivel?.touched">    
+              <p *ngIf="Nivel?.hasError('required')" class="error">
+                  El Nivel es requerido.
+              </p>                                  
+              </div> 
+
+            <input type="text" class="form-control" formControlName="titulo" id="titulo" placeholder="Titulo"><br>
+            
+              <div *ngIf="Titulo?.errors  && Titulo?.touched">    
+              <p *ngIf="Titulo?.hasError('required')" class="error">
+                  El Titulo es requerido.
+              </p>                                  
+              </div> 
+
+            <input type="text" class="form-control" formControlName="periodo" id="periodo" placeholder="Periodo"><br>
+            
+              <div *ngIf="Periodo?.errors  && Periodo?.touched">    
+              <p *ngIf="Periodo?.hasError('required')" class="error">
+                  El Periodo es requerido.
+              </p>                                  
+              </div> 
+
+            <textarea placeholder="Descripcion" formControlName="descrippcion" class="form-control"
+              aria-label="With textarea"></textarea>
+
+                 <div *ngIf="Descripcion?.errors  && Descripcion?.touched">    
+                <p *ngIf="Descripcion?.hasError('required')" class="error">
+                    La Descripcion es requerido.
+                </p>                                  
+                  </div> 
           </div>
 
         </div>
+            
       </div>
-      
+
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
         <button type="button" class="btn btn-primary">Actualizar</button>
       </div>
-      
+
+    </form> 
     </div>
   </div>
 </div>

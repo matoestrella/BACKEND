@@ -9,6 +9,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class MPerfilComponent implements OnInit {
 
   form: FormGroup;
+ 
 
   // Inyectar en el constructor el formBuilder
   constructor(private formBuilder: FormBuilder){ 
@@ -16,11 +17,20 @@ export class MPerfilComponent implements OnInit {
     this.form= this.formBuilder.group({
       password:['',[Validators.required, Validators.minLength(8)]],
       email:['', [Validators.required, Validators.email]],
+      nombre:['', [Validators.required]],
+      apellido:['', [Validators.required]],
    })
   }
 
   ngOnInit() {}
 
+  get Nombre(){
+    return this.form.get("nombre");
+   }
+   get Apellido(){
+    return this.form.get("apellido");
+   }
+//////////////////////////////////////////
   get Password(){
     return this.form.get("password");
   }

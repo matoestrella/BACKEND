@@ -22,16 +22,32 @@
                             <p class="text-white-50 mb-5">Ingrese sus datos</p>
 
                             <div class="form-outline form-white mb-4"><!--formulario 1-->
+
                                 <label for="nombre" class="form-label">Nombre </label>
-                                <input type="nombre" formControlName="nombre"   class="form-control form-control-lg">
+                                <input type="nombre" formControlName="nombre"   class="form-control form-control-lg"><br> 
+                                
+                                <div *ngIf="Nombre?.errors  && Nombre?.touched">    
+                                  <p *ngIf="Nombre?.hasError('required')" class="error">
+                                      El nombre es requerido.
+                                  </p>                                  
+                                </div>                   
+                                        <!-------------------------------->
+
                               
                                 <label for="apellido" class="form-label">Apellido </label>
-                                <input type="apellido" formControlName="apellido"   class="form-control form-control-lg">
+                                <input type="apellido" formControlName="apellido"   class="form-control form-control-lg"><br> 
+                               
+                                <div *ngIf="Apellido?.errors  && Apellido?.touched">    
+                                    <p *ngIf="Apellido?.hasError('required')" class="error">
+                                        El Apellido es requerido.
+                                    </p>
+                                    
+                                  </div>  
                                
                                
 
-                                <label for="apellido" class="form-label">telefono </label>
-                                <input type="telefono" formControlName="apellido"   class="form-control form-control-lg">
+                                <label for="apellido" class="form-label">Telefono </label>
+                                <input type="telefono" formControlName="apellido"   class="form-control form-control-lg"><br>  
 
                                 <label for="formFile" class="form-label">Seleccione su imagen de Perfil</label>
                                 <input class="form-control" type="file" id="formFile"> <br>                 
@@ -52,17 +68,20 @@
                                   </div>
   
                                 </div><!--control-->
+                                
 
                             </div><!--cierre formulario 1-->
 
+
                         </div><!--cierre form 1-->
+                        <button class="btn btn-outline-light btn-lg px-5" type="submit">Enviar</button><br>
               
                     </div><!--cierre Card 1-->
                       
-                    <div class="form-outline form-white mb-4">
+                    <!--<div class="form-outline form-white mb-4">
                       <button class="btn btn-outline-light btn-lg px-5" type="submit">Enviar</button>
-                    </div>
-                    
+                    </div>-->
+
                 </div>
             </div>
         </div>
