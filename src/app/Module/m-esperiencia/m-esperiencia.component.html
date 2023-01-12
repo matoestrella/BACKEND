@@ -1,41 +1,78 @@
 <div class="modal fade" id="experiencia" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-aria-labelledby="staticBackdropLabel" aria-hidden="true">
-<div class="modal-dialog">
-  <div class="modal-content">
-    <div class="modal-header">
-      <h5 class="modal-title" id="staticBackdropLabel">Experiencia Laboral</h5>
-      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-    </div>
-    <div class="modal-body">
-      <div class="input-group">
+  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Experiencia Laboral</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
         <!-- /////////////////////// -->
 
-        <div class="col-12">
-          <div class="form-floating">
-            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-            <label for="floatingTextarea">Nombre de la Empresa 1</label>
-          </div> <br>
+      <form [formGroup]="form" (ngSubmit)="onEnviar($event)">        
+        <div class="input-group">
 
-          <div class="form-floating">
-            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-            <label for="floatingTextarea"> Descripcion del Puesto</label>
-          </div><br>
+          <div class="col-12"><!--empresa-->
+             
+            <div class="form-floating">
 
-          <div class="form-floating">
-            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-            <label for="floatingTextarea"> Periodo en el que trabajo</label>
-            <hr>
-          </div>
+              <textarea class="form-control" formControlName="empresa" placeholder="Leave a comment here"
+                id="floatingTextarea"></textarea>
+
+              <label for="floatingTextarea">Nombre de la Empresa </label>
+
+                  <div *ngIf="Empresa?.errors  && Empresa?.touched">  
+                    <p *ngIf="Empresa?.hasError('required')" class="error">
+                       La empresa es requerida. </p>
+                  </div>
+
+            </div> <br>
+
+            <!-- /////////////////////// -->
+
+            <div class="form-floating"><!--deswcrip-->
+
+              <textarea class="form-control" formControlName="descripcion" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+              <label for="floatingTextarea"> Descripcion del Puesto</label>
+
+              <div *ngIf="Descripcion?.errors  && Descripcion?.touched">  
+                <p *ngIf="Descripcion?.hasError('required')" class="error">
+                  La Descripcion es requerida.
+                </p>
+              </div>
+
+            </div><br>
+
+            <!-- /////////////////////// -->
+
+            <div class="form-floating"> <!--periodo-->
+
+              <textarea class="form-control"  formControlName="periodo" placeholder="" id="floatingTextarea"></textarea>
+              <label for="floatingTextarea"> Periodo en el que trabajo</label>
+
+              <div *ngIf="Periodo?.errors  && Periodo?.touched">  
+                <p *ngIf="Periodo?.hasError('required')" class="error">
+                  El Periodo es requerido.
+                </p>
+              </div>
+              <hr>
+
+            </div>
+
+          </div> 
+
         </div>
-
-       
+      </form>
 
       </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary">Actualizar</button>
+      </div>
+
     </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-      <button type="button" class="btn btn-primary">Actualizar</button>
-    </div>
+
   </div>
-</div>
+
 </div>

@@ -10,31 +10,54 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
 
-      <div class="modal-body">
+
+      <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+
+          <div class="modal-body">
 
         <div class="input-group">
 
           <div class="col-12">
-            
-            <input type="text" class="form-control" id="" placeholder="Titulo"><br>
-            <textarea placeholder="Descripcion" class="form-control" aria-label="With textarea"></textarea><br>
+                     
+            <input type="text" formControlName="titulo" class="form-control" id="" placeholder="Titulo"><br>
+              
+            <div *ngIf="Titulo?.errors  && Titulo?.touched">    
+              <p *ngIf="Titulo?.hasError('required')" class="error">
+                  El Titulo es requerido.
+              </p>                                  
+            </div> 
+           
+            <textarea placeholder="Descripcion" formControlName="descripcion" class="form-control" aria-label="With textarea"></textarea><br>
           
-         <div class="input-group mb-3">
-            <input type="file" class="form-control" id="inputGroupFile02">
-            <label class="input-group-text" for="inputGroupFile02">Subir</label>
-         </div>
+            <div *ngIf="Descripcion?.errors  && Descripcion?.touched">    
+              <p *ngIf="Descripcion?.hasError('required')" class="error">
+                  La Descripcion es requerido.
+              </p>                                  
+            </div> 
 
-        </div>
+
+            <div class="input-group mb-3">
+             <input type="file" class="form-control" id="inputGroupFile02">
+             <label class="input-group-text" for="inputGroupFile02">Subir</label>
+            </div>
+
+          </div>
          
-
         </div>
-      </div>
+
+          </div>
       
-      <div class="modal-footer">
+          <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
         <button type="button" class="btn btn-primary">Actualizar</button>
-      </div>
-      
-    </div>
-  </div>
-</div>
+          </div>
+
+    
+      </form>  
+
+    </div>22
+    
+  </div>33
+
+  
+</div>44
