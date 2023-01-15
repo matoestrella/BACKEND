@@ -17,7 +17,7 @@
       <div class="modal-body">
         <div class="input-group">
                   
-          <textarea placeholder="Descripcion" formControlName="descripcion" class="form-control" aria-label="With textarea"></textarea>
+          <textarea placeholder="Descripcion" formControlName="descripcion" [(ngModel)]="descripcion"class="form-control" aria-label="With textarea"></textarea>
         
         </div>
         <div *ngIf="Descripcion?.errors  && Descripcion?.touched">    

@@ -24,7 +24,7 @@
                             <div class="form-outline form-white mb-4"><!--formulario 1-->
 
                                 <label for="nombre" class="form-label">Nombre </label>
-                                <input type="nombre" formControlName="nombre"   class="form-control form-control-lg"><br> 
+                                <input type="nombre" formControlName="nombre"[(ngModel)]="nombre"   class="form-control form-control-lg"><br> 
                                 
                                 <div *ngIf="Nombre?.errors  && Nombre?.touched">    
                                   <p *ngIf="Nombre?.hasError('required')" class="error">
@@ -35,7 +35,7 @@
 
                               
                                 <label for="apellido" class="form-label">Apellido </label>
-                                <input type="apellido" formControlName="apellido"   class="form-control form-control-lg"><br> 
+                                <input type="apellido" formControlName="apellido" [(ngModel)]="apellido"  class="form-control form-control-lg"><br> 
                                
                                 <div *ngIf="Apellido?.errors  && Apellido?.touched">    
                                     <p *ngIf="Apellido?.hasError('required')" class="error">
@@ -47,16 +47,16 @@
                                
 
                                 <label for="apellido" class="form-label">Telefono </label>
-                                <input type="telefono" formControlName="apellido"   class="form-control form-control-lg"><br>  
+                                <input type="telefono" formControlName="telefono" [(ngModel)]="telefono"   class="form-control form-control-lg"><br>  
 
                                 <label for="formFile" class="form-label">Seleccione su imagen de Perfil</label>
-                                <input class="form-control" type="file" id="formFile"> <br>                 
+                                <input class="form-control" formControlName="foto" [(ngModel)]="foto"  type="file" id="formFile"> <br>                 
                            
                            
                                 <div class="mb-3"><!--control-->
 
                                   <label for="email">Email: </label>
-                                  <input type="email" formControlName="email" class="form-control form-control-lg">
+                                  <input type="email" formControlName="email" [(ngModel)]="email" class="form-control form-control-lg">
                                                             
                                   <div *ngIf="Mail?.errors  && Mail?.touched">
                                     <p *ngIf="Mail?.hasError('required')" class="error">

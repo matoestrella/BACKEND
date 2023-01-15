@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Experiencia } from '../Entity/experiencia';
 import { DatosService } from '../servicios/datos.service';
+import { ExperienciaService } from '../servicios/experiencia.service';
 
 @Component({
   selector: 'app-experiencia',
@@ -7,14 +9,17 @@ import { DatosService } from '../servicios/datos.service';
   styleUrls: ['./experiencia.component.css']
 })
 export class ExperienciaComponent implements OnInit { 
-  job:any='';
+ 
+  experiencia:Experiencia[]=[];
   
-  constructor(private trabajo:DatosService) { }
+  constructor(private serviEXpe:ExperienciaService) { }
 
   ngOnInit(): void {
-    this.trabajo.getDatos().subscribe(datos=>{//  aca me subcribo al json
-          this.job=datos.trabajos;// y traigo los datos del json y se los asignos a las variables de arriba
-    })
+    
   }
+ 
+  cargarExperiencia():void{
+    this.serviEXpe.lista().subscribe(data=> {this.experiencia=data});
+  } 
 
 }

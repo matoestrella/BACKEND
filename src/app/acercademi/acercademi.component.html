@@ -4,10 +4,10 @@
     </div>
 
     <div class="col-xs-12 col-sm-12 col-md-2 col-lg2">
-        <p id="nombre">{{nombre}}{{apellido}}</p>
-        <p id="titulo">{{titulo}}</p>
-        <p id="email">{{dx.email}}</p>
-        <p id="telefono">{{dx.telefono}}</p>
+        <p id="nombre">{{persona.nombre}}{{persona.apellido}}</p>
+        <p id="titulo">{{persona.titulo}}</p>
+        <p id="email">{{persona.email}}</p>
+        <p id="telefono">{{persona.telefono}}</p>
 
         <button class="btn" type="button" data-bs-toggle="modal" data-bs-target="#perfil">
             <i class="bi bi-pencil-square fa-xl"> </i>
@@ -42,7 +42,7 @@
             </div>
            
             <h1>Acerca de Mi</h1> 
-            <p>{{descripcion}}</p>   
+            <p>{{persona.descripcion}}</p>   
                     
         </span>
     </div>

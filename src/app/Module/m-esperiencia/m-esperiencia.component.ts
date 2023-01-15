@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Experiencia } from 'src/app/Entity/experiencia';
+import { ExperienciaService } from 'src/app/servicios/experiencia.service';
 
 
 @Component({
@@ -10,8 +12,12 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class MEsperienciaComponent implements OnInit {
 
  form: FormGroup;
+
+    empresa:String="";
+    periodo:String="";
+    descripcion:String="";
  
-  constructor(private formBuilder: FormBuilder) { 
+  constructor(private formBuilder: FormBuilder, private servExperiencia:ExperienciaService) { 
     this.form= this.formBuilder.group({
       empresa:['',[Validators.required]],
       periodo:['', [Validators.required]],
@@ -19,7 +25,20 @@ export class MEsperienciaComponent implements OnInit {
       
     })
   }
+
+
   ngOnInit() {}
+
+onCreate():void{
+  const expe =new Experiencia(this.empresa,this.periodo,this.descripcion);
+    this.servExperiencia.create(expe).subscribe(data=>{alert("experiencia Agregada")
+      window.location.reload();
+      }, err=> { alert("Fallo la carga")      
+        window.location.reload();
+    }); 
+  
+}
+
   
   get Empresa(){
     return this.form.get("empresa");
@@ -35,14 +54,14 @@ export class MEsperienciaComponent implements OnInit {
  
 
   onEnviar(event: Event){
-    // Detenemos la propagación o ejecución del compotamiento submit de un form
+    
     event.preventDefault; 
+     if (this.form.valid){
  
-    if (this.form.valid){
-      // Llamamos a nuestro servicio para enviar los datos al servidor
-      // También podríamos ejecutar alguna lógica extra
-      alert("Todo salio bien ¡Enviar formuario!")
+      this.onCreate();
+       alert("Todo salio bien ¡Enviar formuario!")
     }else{
+      alert("Fallo la caraga")
       // Corremos todas las validaciones para que se ejecuten los mensajes de error en el template     
       this.form.markAllAsTouched(); 
     }

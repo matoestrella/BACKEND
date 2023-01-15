@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Persona } from 'src/app/Entity/persona';
+import { PersonaService } from 'src/app/servicios/persona.service';
 
 
 @Component({
@@ -10,7 +12,11 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class MAcercaComponent implements OnInit {
   form: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) { 
+  descripcion:Persona="";
+
+
+
+  constructor(private formBuilder: FormBuilder, private servPersona:PersonaService) { 
     this.form= this.formBuilder.group({
      descripcion:['', [Validators.required]],
     
@@ -18,6 +24,23 @@ export class MAcercaComponent implements OnInit {
   }
 
   ngOnInit() {}
+  
+  onCreate():void{
+    const desc = new Persona(this.descripcion );
+    
+      this.servPersona.create(desc).subscribe(data=>{alert("experiencia Agregada")
+        window.location.reload();
+        }, err => { alert("Fallo la carga")      
+          window.location.reload();
+      }); 
+  
+}
+
+
+
+
+
+
 
   get Descripcion(){
     return this.form.get("descripcion");

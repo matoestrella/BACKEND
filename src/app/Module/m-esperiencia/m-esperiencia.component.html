@@ -16,7 +16,7 @@
              
             <div class="form-floating">
 
-              <textarea class="form-control" formControlName="empresa" placeholder="Leave a comment here"
+              <textarea class="form-control" formControlName="empresa" [(ngModel)]="empresa" placeholder="Leave a comment here"
                 id="floatingTextarea"></textarea>
 
               <label for="floatingTextarea">Nombre de la Empresa </label>
@@ -32,7 +32,7 @@
 
             <div class="form-floating"><!--deswcrip-->
 
-              <textarea class="form-control" formControlName="descripcion" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+              <textarea class="form-control" formControlName="descripcion" [(ngModel)]="descripcion"placeholder="Leave a comment here" id="floatingTextarea"></textarea>
               <label for="floatingTextarea"> Descripcion del Puesto</label>
 
               <div *ngIf="Descripcion?.errors  && Descripcion?.touched">  
@@ -47,7 +47,7 @@
 
             <div class="form-floating"> <!--periodo-->
 
-              <textarea class="form-control"  formControlName="periodo" placeholder="" id="floatingTextarea"></textarea>
+              <textarea class="form-control"  formControlName="periodo" [(ngModel)]="periodo" placeholder="" id="floatingTextarea"></textarea>
               <label for="floatingTextarea"> Periodo en el que trabajo</label>
 
               <div *ngIf="Periodo?.errors  && Periodo?.touched">  
